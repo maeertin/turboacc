@@ -1,5 +1,11 @@
 # @repo/ui
 
+## 0.0.2
+
+### Patch Changes
+
+- 170e00a: Change card template
+
 ## 0.0.1
 
 ### Patch Changes
