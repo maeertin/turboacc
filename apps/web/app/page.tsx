@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Card, Code, Button } from "@repo/ui";
+import { Card, Code, Button } from "@maeertin/ui";
 import styles from "./page.module.css";
 
 function Gradient({

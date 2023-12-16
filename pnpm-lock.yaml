@@ -29,7 +29,7 @@ importers:
 
   apps/web:
     dependencies:
-      '@repo/ui':
+      '@maeertin/ui':
         specifier: workspace:*
         version: link:../../packages/ui
       next:
