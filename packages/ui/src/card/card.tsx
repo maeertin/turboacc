@@ -1,9 +1,11 @@
-export function Card(props: {
+type CardProps = {
   className?: string;
   title: string;
   children: React.ReactNode;
   href: string;
-}): JSX.Element {
+};
+
+export function Card(props: CardProps): JSX.Element {
   const { className, title, children, href } = props;
 
   return (
