@@ -8,7 +8,9 @@ interface ButtonProps {
   appName: string;
 }
 
-export const Button = ({ children, className, appName }: ButtonProps) => {
+export const Button = (props: ButtonProps) => {
+  const { children, className, appName } = props;
+
   return (
     <button
       className={clsx(classes.root, className)}
