@@ -1,4 +1,5 @@
 import { defineConfig, type Options } from "tsup";
+// import CssModulesPlugin from "esbuild-css-modules-plugin";
 import path from "path";
 import fsPromises from "fs/promises";
 import postcss from "postcss";
@@ -25,6 +26,18 @@ export default defineConfig((options: Options) => ({
   minify: true,
   clean: true,
   external: ["react"],
+  // esbuildPlugins: [
+  //   CssModulesPlugin({
+  //     // @see https://github.com/indooorsman/esbuild-css-modules-plugin/blob/main/index.d.ts for more details
+  //     force: true,
+  //     emitDeclarationFile: true,
+  //     localsConvention: "camelCaseOnly",
+  //     namedExports: true,
+  //     inject: false,
+  //     // tsconfig: "tsconfig.json",
+  //     // outdir: "dist",
+  //   }),
+  // ],
   // [Wanted] Support CSS module
   // https://github.com/egoist/tsup/issues/536
   esbuildPlugins: [

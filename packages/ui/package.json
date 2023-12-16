@@ -10,7 +10,9 @@
   ],
   "scripts": {
     "build": "tcm src && tsup",
+    "build2": "tsup",
     "dev": "tcm src --watch & tsup --watch",
+    "dev2": "tsup --watch",
     "lint": "eslint . --max-warnings 0",
     "check-types": "tsc --noEmit",
     "generate:component": "turbo gen react-component"
@@ -24,6 +26,7 @@
     "@types/react": "^18.2.0",
     "@types/react-dom": "^18.2.0",
     "autoprefixer": "^10.4.16",
+    "esbuild-css-modules-plugin": "^3.1.0",
     "eslint": "^8.53.0",
     "hash-css-selector": "^1.0.0",
     "postcss": "^8.4.32",
