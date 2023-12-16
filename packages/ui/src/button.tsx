@@ -1,4 +1,5 @@
 import { ReactNode } from "react";
+import clsx from "clsx";
 import classes from "./button.module.css";
 
 interface ButtonProps {
@@ -7,15 +8,10 @@ interface ButtonProps {
   appName: string;
 }
 
-export const Button = ({
-  children,
-  // className,
-  appName,
-}: ButtonProps) => {
+export const Button = ({ children, className, appName }: ButtonProps) => {
   return (
     <button
-      // className={className}
-      className={classes.root}
+      className={clsx(classes.root, className)}
       onClick={() => alert(`Hello from your ${appName} app!`)}
     >
       {children}

@@ -2,9 +2,6 @@
   "name": "@repo/ui",
   "version": "0.0.0",
   "private": true,
-  "sideEffects": [
-    "**/*.css"
-  ],
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
@@ -12,8 +9,8 @@
     "dist/**"
   ],
   "scripts": {
-    "build": "tsup",
-    "dev": "tsup --watch",
+    "build": "tcm src & tsup",
+    "dev": "tcm src --watch & tsup --watch",
     "lint": "eslint . --max-warnings 0",
     "check-types": "tsc --noEmit",
     "generate:component": "turbo gen react-component"
@@ -33,7 +30,12 @@
     "postcss-modules": "^6.0.0",
     "react": "^18.2.0",
     "tsup": "^8.0.1",
-    "typescript": "^5.2.2"
+    "typed-css-modules": "^0.8.1",
+    "typescript": "^5.2.2",
+    "typescript-plugin-css-modules": "^5.0.2"
+  },
+  "dependencies": {
+    "clsx": "^2.0.0"
   },
   "publishConfig": {
     "access": "public"
