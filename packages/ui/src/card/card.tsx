@@ -1,14 +1,11 @@
-export function Card({
-  className,
-  title,
-  children,
-  href,
-}: {
+export function Card(props: {
   className?: string;
   title: string;
   children: React.ReactNode;
   href: string;
 }): JSX.Element {
+  const { className, title, children, href } = props;
+
   return (
     <a
       className={className}
