@@ -6,6 +6,7 @@ import postcssModules from "postcss-modules";
 import { generateScopedName } from "hash-css-selector";
 
 export default defineConfig((options: Options) => ({
+  // Build react package for use in nextjs 13
   // https://github.com/egoist/tsup/issues/835
   esbuildOptions(internalOptions) {
     internalOptions.banner = {
@@ -15,16 +16,16 @@ export default defineConfig((options: Options) => ({
   treeshake: false, // Enabling this removes client directives.
   splitting: false,
   entry: ["src/**/*.{ts,tsx}"],
-  // entry: ["src/index.{ts,tsx}"],
   format: ["esm", "cjs"],
   loader: {
     ".css": "local-css",
   },
   dts: true,
-  // sourcemap: true,
-  // minify: true,
+  sourcemap: true,
+  minify: true,
   clean: true,
   external: ["react"],
+  // [Wanted] Support CSS module
   // https://github.com/egoist/tsup/issues/536
   esbuildPlugins: [
     {
